@@ -1,0 +1,31 @@
+let nftCollection = [];
+function mintNFT(name, artist, year) {
+    const nft = {
+        name: name,
+        artist: artist,
+        year: year
+    };
+    nftCollection.push(nft);
+}
+
+function listNFTs() {
+    nftCollection.forEach((nft, index) => {
+        console.log(`NFT ${index + 1}:`);
+        console.log(`  Name: ${nft.name}`);
+        console.log(`  Artist: ${nft.artist}`);
+        console.log(`  Year: ${nft.year}`);
+    });
+}
+
+
+function getTotalSupply() {
+    console.log(`Total NFTs: ${nftCollection.length}`);
+}
+
+// Call your functions below this line
+mintNFT("CryptoPunk", "Larva Labs", 2017);
+mintNFT("Bored Ape", "Yuga Labs", 2021);
+mintNFT("Art Blocks", "Art Blocks Inc.", 2020);
+
+listNFTs();
+getTotalSupply();
